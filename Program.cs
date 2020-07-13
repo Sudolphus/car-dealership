@@ -19,11 +19,16 @@ namespace Dealership
       string stringMaxPrice = Console.ReadLine();
       int maxPrice = int.Parse(stringMaxPrice);
       
+      yugo.SetPrice(100);
+
       foreach(Car automobile in Cars)
       {
         if (automobile.WorthBuying(maxPrice))
         {
-          Console.WriteLine(automobile.MakeModel);
+          Console.WriteLine("----------------------");
+          Console.WriteLine(automobile.GetMakeModel());
+          Console.WriteLine(automobile.GetMiles() + " miles");
+          Console.WriteLine("$" + automobile.GetPrice());
         }
       }
     }
