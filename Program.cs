@@ -31,6 +31,7 @@ namespace Dealership
           Console.WriteLine("$" + automobile.GetPrice());
         }
       }
+      Console.WriteLine(Car.MakeSound("bang"));
     }
   }
 }
